@@ -1,4 +1,50 @@
 
+# Cloud Security Engineer Challenge
+
+## Description
+
+This repository contains the OPA policy for controlling access to an S3 bucket based on user roles.
+
+## Files
+
+- `policy.rego`: The REGO policy for access control.
+- `policy_test.rego`: Test cases for the policy.
+- `input_allow.json`: Test input JSON to allow access.
+- `input_deny.json`: Test input JSON to deny access.
+
+## Usage
+
+1. Install OPA from [Open Policy Agent](https://www.openpolicyagent.org/docs/latest/#1-download-opa).
+2. Run the tests using the command:
+    ```sh
+    opa test policy.rego policy_test.rego
+    ```
+
+## Policy
+
+### policy.rego
+
+```rego
+package s3bucket
+
+default allow = false
+
+allow {
+    input.request.user.role == "st-access-role"
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 #  Edge Cases
 
 
