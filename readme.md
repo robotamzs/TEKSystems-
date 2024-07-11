@@ -1,6 +1,6 @@
-Edge Cases and Policy Bypass Considerations
-Edge Cases
-Missing Role in Input:
+
+#H1 Edge Cases
+	**bold text** Missing Role in Input:
 
 If the user's role is not provided in the input, the policy should deny access by default.
 This ensures that incomplete or malformed requests do not inadvertently bypass the policy.
